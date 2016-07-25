@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @negocio.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @negocio.desc %>
+</p>
+
+<%= link_to 'Edit', edit_negocio_path(@negocio) %> |
+<%= link_to 'Back', negocios_path %>
