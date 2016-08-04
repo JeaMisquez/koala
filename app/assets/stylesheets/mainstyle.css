@@ -24,7 +24,7 @@ header h1{
   padding: 0;
 }
 
-input[type="text"] {
+#search-box  input[type="text"] {
   height: 60px;
   font-size: 55px;
   display: inline-block;
@@ -47,7 +47,7 @@ input[type="text"] {
   cursor: text;
 }
 
-input[type="text"]:focus:hover {
+#search-box input[type="text"]:focus:hover {
   border-bottom: 1px solid #BBB;
 }
 /*just in case
@@ -57,7 +57,7 @@ input[type="text"]:focus {
   border-bottom: 1px solid #BBB;
   cursor: text;
 }*/
-input[type="submit"] {
+#search-box  input[type="submit"] {
   height: 67px;
   width: 63px;
   display: inline-block;
@@ -76,7 +76,7 @@ input[type="submit"] {
   transition: opacity .4s ease;
 }
 
-input[type="submit"]:hover {
+#search-box  input[type="submit"]:hover {
   opacity: 0.8;
 }
 /*Search-results*/
