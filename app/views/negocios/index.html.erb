@@ -1,29 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Koala</h1>
+<div id='search-box'>
+<%= form_tag(negocios_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Que estas buscando..." %>
+  <div id='button'>
+   <%= submit_tag "Buscar" %>
+  </div>
+<% end %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @negocios.each do |negocio| %>
-      <tr>
-        <td><%= negocio.name %></td>
-        <td><%= negocio.desc %></td>
-        <td><%= link_to 'Show', negocio %></td>
-        <td><%= link_to 'Edit', edit_negocio_path(negocio) %></td>
-        <td><%= link_to 'Destroy', negocio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id='search-results'>
+  <% @negocios.each do |negocio| %>
+  <div id='results-box'>
+    <div id='name'><%= link_to negocio.name, negocio %></div>
+    <div id='desc'><%= negocio.desc %></div>
+  </div>
+  <% end %>
+</div>
 
-<br>
 
-<%= link_to 'Registro', new_negocio_path %>

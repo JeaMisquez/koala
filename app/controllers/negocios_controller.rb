@@ -3,10 +3,16 @@ class NegociosController < ApplicationController
 
   # GET /negocios
   # GET /negocios.json
+
   def index
     @negocios = Negocio.all
+    if params[:search]
+      @negocios = Negocio.search(params[:search]).order("created_at DESC")
+    else
+      @negocios = Negocio.all.order('created_at DESC')
+    end
   end
-
+  
   # GET /negocios/1
   # GET /negocios/1.json
   def show
@@ -71,4 +77,5 @@ class NegociosController < ApplicationController
     def negocio_params
       params.require(:negocio).permit(:name, :desc)
     end
+
 end

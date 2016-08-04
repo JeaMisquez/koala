@@ -2,10 +2,27 @@
 <html>
 <head>
   <title>Koala</title>
+   <%= stylesheet_link_tag "mainstyle" %> 
 </head>
 <body>
+<header>
+	<h1>Koala</h1>
+</header>
 
 <%= yield %>
 
+<footer>
+	<div>
+	  <nav id="primary_nav_wrap">
+		<ul>
+		  <li class="current-menu-item"><a href="#">Inicio</a></li>
+		  <li><%= link_to 'Registrate', new_negocio_path %></li>
+		  <li><a href="#">Conocenos</a></li>
+		  <li><a href="#">Terminos y Condiciones</a></li>
+		  <li><a href="#">Contacto</a></li>
+		</ul>
+	  </nav>
+	</div>
+</footer>
 </body>
 </html>
