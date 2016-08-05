@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: xajbu3jpktbvgypg
-  password: wya4pi0bzzquwjrg 
+  username: root
+  password: root1234
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: koala_dev
+  database: koala
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: koala
-  username: xajbu3jpktbvgypg
-  password: wya4pi0bzzquwjrg
+  database: koala_production
+  username: koala
+  password: <%= ENV['KOALA_DATABASE_PASSWORD'] %>
