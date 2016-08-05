@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: xajbu3jpktbvgypg
-  password: wya4pi0bzzquwjrg 
+  username: root
+  password: root1234
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: koala
-  username: xajbu3jpktbvgypg
+  database: koala_production
+  username: koala
   password: <%= ENV['KOALA_DATABASE_PASSWORD'] %>
