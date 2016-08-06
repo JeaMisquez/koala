@@ -51,4 +51,4 @@ production:
   <<: *default
   database: heroku_53b6fd23e7af8af
   username: b33c63cc69575b
-  password: <%= ENV['KOALA_DATABASE_PASSWORD'] %>
+  password: b14064e7
