@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: b33c63cc69575b
-  password: b14064e7
+  username: root
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: heroku_53b6fd23e7af8af
-  username: b33c63cc69575b
-  password: b14064e7
+  database: <%= ENV['DATABASE_URL'] %>
+  username: koala
+  password: <%= ENV['KOALA_DATABASE_PASSWORD'] %>
