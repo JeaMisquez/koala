@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
-
-<div id='search-box'>
-<%= form_tag(negocios_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Que estas buscando..." %>
-  <div id='button'>
-   <%= submit_tag "Buscar" %>
+<div id='search-box-wrapper'>
+  <div id='search-box'>
+  <%= form_tag(negocios_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Que estas buscando..." %>
+    <div id='button'>
+     <%= submit_tag "Buscar" %>
+    </div>
+  <% end %>
   </div>
-<% end %>
 </div>
-
 <div id='search-results'>
   <% @negocios.each do |negocio| %>
   <div id='results-box'>
@@ -17,5 +17,4 @@
   </div>
   <% end %>
 </div>
-
 

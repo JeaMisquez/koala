@@ -5,13 +5,13 @@
    <%= stylesheet_link_tag "mainstyle" %> 
 </head>
 <body>
+<div id='jack-in-the-box'>
 <header>
-	<img src="/img/logo.jpg" alt="koala logo" />
-	<h1>Koala</h1>
+	<%= image_tag("logo.jpg", :alt => "koala logo") %>	
 </header>
 
 <%= yield %>
-
+</div>
 <footer>
 	<div>
 	  <nav id="primary_nav_wrap">
