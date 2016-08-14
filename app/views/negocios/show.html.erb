@@ -1,14 +1,66 @@
 <p id="notice"><%= notice %></p>
+<script type="">
+handler = Gmaps.build('Google');
+handler.buildMap(
+  {
+    provider: {
+      disableDefaultUI: true
+      // here you can pass other Google Maps API options here
+    },
+    internal: {
+      id: 'map'
+    }
+  },
+  function() {
+    markers = handler.addMarkers([
+      {
+        "lat": 0,
+        "lng": 0,
+        "picture": {
+          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+          "width":  36,
+          "height": 36
+        },
+        "infowindow": "hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  }
+);		
+</script>
 
-<p>
-  <strong>Name:</strong>
-  <%= @negocio.name %>
-</p>
+<div id='back-btn'><%= link_to 'Back', negocios_path %></div>
+<div id='header-wrap-promo'>
+	<div id='header-promo'>
+		<h1><%= @negocio.name %></h1>
+	</div>
+</div>
+<div id='sub-wrap-promo'>
+	<div id='sub-promo'>
+		<%= @negocio.desc %>
+	</div>
+</div>
+ <div id='body-wrap-promo'>
+ 	<div id='body-promo'>
+ 		<%= @negocio.body %>
+ 	</div>
+ </div>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @negocio.desc %>
-</p>
+  <div id='contact-wrap-promo'>
+  	<div id='contact-promo'>
+  		<div id='contact-header'>Contacto</div>
+  		<div id='address'>Direccion: <%= @negocio.address %></div>
+  		<div id='cellphone'>Celular: <%= @negocio.cellphone %></div>
+  		<div id='telephone'>Telefono: <%= @negocio.telephone %></div>
+  		<div id='schedule'>Horario: <%= @negocio.schedule %></div>
+  		<div style='width: 800px;'>
+  			<div id="map" style='width: 800px; height: 400px;'></div>
+		</div>
+  	</div>
+  </div>
+<div>
+</div>
 
-<%= link_to 'Edit', edit_negocio_path(@negocio) %> |
-<%= link_to 'Back', negocios_path %>
+<!--<%= link_to 'Edit', edit_negocio_path(@negocio) %> -->
+

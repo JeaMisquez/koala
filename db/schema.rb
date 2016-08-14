@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160725202733) do
+ActiveRecord::Schema.define(version: 20160813040819) do
 
   create_table "negocios", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.text     "desc",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.text     "body",       limit: 65535
+    t.text     "telephone",  limit: 65535
+    t.text     "cellphone",  limit: 65535
+    t.text     "address",    limit: 65535
+    t.text     "email",      limit: 65535
+    t.text     "maps",       limit: 65535
+    t.text     "schedule",   limit: 65535
   end
 
 end
