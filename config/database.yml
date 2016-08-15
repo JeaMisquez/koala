@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: b33c63cc69575b
+  username: sofpjs0o9tu447dm
   password: <%= ENV['KOALA_DATABASE_PASSWORD'] %>
   socket: /var/run/mysqld/mysqld.sock
 
