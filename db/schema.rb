@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160813040819) do
     t.text     "email",      limit: 65535
     t.text     "maps",       limit: 65535
     t.text     "schedule",   limit: 65535
+    t.text     "lat",        limit: 65535
+    t.text     "lng",        limit: 65535
   end
 
 end

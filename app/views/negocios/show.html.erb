@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-<script type="">
+<script type="text/javascript">
+var lat = <%= @negocio.lat %>
+var lng = <%= @negocio.lng %>
 handler = Gmaps.build('Google');
 handler.buildMap(
   {
@@ -14,8 +16,8 @@ handler.buildMap(
   function() {
     markers = handler.addMarkers([
       {
-        "lat": 0,
-        "lng": 0,
+        "lat":lat,
+        "lng":lng,
         "picture": {
           "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
           "width":  36,

@@ -7,5 +7,7 @@ class AddBoddyToNegocios < ActiveRecord::Migration
     add_column :negocios, :email, :text
     add_column :negocios, :maps, :text
     add_column :negocios, :schedule, :text
+    add_column :negocios, :lat, :text
+    add_column :negocios, :lng, :text
   end
 end

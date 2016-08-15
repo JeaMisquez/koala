@@ -75,7 +75,7 @@ class NegociosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def negocio_params
-      params.require(:negocio).permit(:name, :desc, :body, :telephone, :cellphone, :address, :maps, :schedule, :email)
+      params.require(:negocio).permit(:name, :desc, :body, :telephone, :cellphone, :address, :schedule, :email, :lat, :lng)
     end
 
 end
