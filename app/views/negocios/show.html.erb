@@ -2,6 +2,7 @@
 <script type="text/javascript">
 var lat = <%= @negocio.lat %>
 var lng = <%= @negocio.lng %>
+var info = <%= @negocio.name %>
 handler = Gmaps.build('Google');
 handler.buildMap(
   {
@@ -19,11 +20,11 @@ handler.buildMap(
         "lat":lat,
         "lng":lng,
         "picture": {
-          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+          "url": "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/128/Map-Marker-Marker-Outside-Azure.png",
           "width":  36,
           "height": 36
         },
-        "infowindow": "hello!"
+        "infowindow": info
       }
     ]);
     handler.bounds.extendWith(markers);
