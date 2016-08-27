@@ -2,7 +2,7 @@
 <script type="text/javascript">
 var lat = <%= @negocio.lat %>
 var lng = <%= @negocio.lng %>
-var info = <%= @negocio.name %>
+
 handler = Gmaps.build('Google');
 handler.buildMap(
   {
@@ -24,7 +24,7 @@ handler.buildMap(
           "width":  36,
           "height": 36
         },
-        "infowindow": ''
+        "infowindow": 'hello!'
       }
     ]);
     handler.bounds.extendWith(markers);
